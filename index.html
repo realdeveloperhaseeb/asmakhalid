@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Asma Khalid — LinkedIn Growth Expert</title>
+  <meta name="description" content="Asma Khalid is a LinkedIn Growth Expert who builds strong personal brands, writes high-performing content, and manages LinkedIn end-to-end — so you can focus on your business." />
+  <meta name="author" content="Asma Khalid" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Asma Khalid — LinkedIn Growth Expert" />
+  <meta property="og:description" content="I build personal brands, write high-performing content, and manage LinkedIn end-to-end." />
+  <meta property="og:image" content="assets/asma-cover.jpg" />
+
+  <link rel="icon" type="image/jpeg" href="assets/asma-profile.jpg" />
+
+  <!-- Outfit font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Animated background glows -->
+  <div class="bg-glows" aria-hidden="true">
+    <span class="glow glow-1"></span>
+    <span class="glow glow-2"></span>
+    <span class="glow glow-3"></span>
+  </div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- Scroll progress bar -->
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- Custom cursor -->
+  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+
+  <!-- Navbar -->
+  <header class="nav" id="nav">
+    <a href="#home" class="nav__brand">
+      <span class="nav__logo">AK</span>
+      <span class="nav__name">Asma Khalid</span>
+    </a>
+    <nav class="nav__links" id="navLinks">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#work">Work</a>
+      <a href="#experience">Experience</a>
+      <a href="#reviews">Reviews</a>
+    </nav>
+    <a href="https://www.linkedin.com/in/asmakhalid-copywriter/" target="_blank" rel="noopener" class="btn btn--primary nav__cta">Book a Free Call</a>
+    <button class="nav__toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="hero__inner">
+        <div class="hero__content reveal">
+          <span class="pill pill--status">
+            <span class="dot"></span> Available for new clients
+          </span>
+          <h1 class="hero__title">
+            LinkedIn shouldn't feel like a <span class="grad-text">second job.</span>
+          </h1>
+          <p class="hero__sub">
+            I'm <strong>Asma</strong> — a LinkedIn Growth Expert. I build strong personal
+            brands, write high-performing content, and manage LinkedIn end-to-end, so you
+            can focus on your life and business.
+          </p>
+          <div class="hero__cta">
+            <a href="https://www.linkedin.com/in/asmakhalid-copywriter/" target="_blank" rel="noopener" class="btn btn--primary">
+              Book a Free 1:1 Call
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <a href="#work" class="btn btn--ghost">See my work</a>
+          </div>
+          <div class="hero__chips">
+            <span class="chip">Personal Branding</span>
+            <span class="chip">Profile Optimization</span>
+            <span class="chip">Ghostwriting</span>
+            <span class="chip">Content Creation</span>
+          </div>
+        </div>
+
+        <div class="hero__visual reveal" data-delay="120">
+          <div class="profile-card tilt">
+            <div class="profile-card__glow"></div>
+            <img src="assets/asma-profile.jpg" alt="Asma Khalid, LinkedIn Growth Expert" class="profile-card__img" />
+            <div class="profile-card__badge">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="#3b82f6"><path d="M12 2l2.4 1.7 2.9-.2 1 2.7 2.5 1.5-.8 2.8.8 2.8-2.5 1.5-1 2.7-2.9-.2L12 22l-2.4-1.7-2.9.2-1-2.7L3.2 16l.8-2.8L3.2 10l2.5-1.5 1-2.7 2.9.2L12 2z"/><path d="M9.5 12.5l1.8 1.8 3.5-3.6" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div class="profile-card__info">
+              <h3>Asma Khalid</h3>
+              <p>LinkedIn Growth Expert</p>
+            </div>
+          </div>
+
+          <!-- floating mini cards -->
+          <div class="float-card float-card--a">
+            <span class="float-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+            </span>
+            <div><b>100+ clients</b><small>Brands &amp; founders</small></div>
+          </div>
+          <div class="float-card float-card--b">
+            <span class="float-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5z"/></svg>
+            </span>
+            <div><b>Done-for-you</b><small>Posting &amp; engagement</small></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Worked-with marquee -->
+      <div class="marquee reveal">
+        <span class="marquee__label">Worked with</span>
+        <div class="marquee__track">
+          <div class="marquee__group">
+            <span>ESS — Enterprise Software Solutions</span><i>•</i>
+            <span>LinkedIn</span><i>•</i>
+            <span>Fiverr</span><i>•</i>
+            <span>Upwork</span><i>•</i>
+            <span>Ethum</span><i>•</i>
+            <span>Founders & CEOs</span><i>•</i>
+          </div>
+          <div class="marquee__group" aria-hidden="true">
+            <span>ESS — Enterprise Software Solutions</span><i>•</i>
+            <span>LinkedIn</span><i>•</i>
+            <span>Fiverr</span><i>•</i>
+            <span>Upwork</span><i>•</i>
+            <span>Ethum</span><i>•</i>
+            <span>Founders & CEOs</span><i>•</i>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STATS -->
+    <section class="stats">
+      <div class="stat reveal">
+        <h2 class="stat__num" data-count="4">0</h2>
+        <p>Years writing copy that converts</p>
+      </div>
+      <div class="stat reveal" data-delay="80">
+        <h2 class="stat__num" data-count="100" data-suffix="+">0</h2>
+        <p>Brands & founders served</p>
+      </div>
+      <div class="stat reveal" data-delay="160">
+        <h2 class="stat__num" data-count="90" data-suffix="-Day">0</h2>
+        <p>System to LinkedIn monetization</p>
+      </div>
+      <div class="stat reveal" data-delay="240">
+        <h2 class="stat__num" data-count="5" data-suffix="★">0</h2>
+        <p>Client satisfaction rating</p>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section about" id="about">
+      <div class="section__head reveal">
+        <span class="eyebrow">Who I am</span>
+        <h2 class="section__title">Most people struggle on LinkedIn.<br /><span class="grad-text">I handle all of it for you.</span></h2>
+      </div>
+      <div class="about__grid">
+        <div class="about__text reveal">
+          <p>
+            Most people struggle on LinkedIn because of no time to post, low engagement,
+            inconsistent content, a weak profile, or no personal-brand direction.
+          </p>
+          <p>
+            I'm Asma — a LinkedIn Growth Expert. I build strong personal brands, write
+            high-performing content, and manage LinkedIn end-to-end. Everything is simple,
+            human, and built to get results — <strong>consistently.</strong>
+          </p>
+          <ul class="about__problems">
+            <li>No time to post</li>
+            <li>Low engagement</li>
+            <li>Inconsistent content</li>
+            <li>Weak or unclear profile</li>
+            <li>No personal brand direction</li>
+          </ul>
+          <a href="https://www.linkedin.com/in/asmakhalid-copywriter/" target="_blank" rel="noopener" class="btn btn--primary">
+            Let's elevate your LinkedIn
+            <svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor"><path d="M12 21s-7.5-4.6-10-9.2C.4 8.6 1.9 4.9 5.3 4.9c2 0 3.3 1.2 4 2.4.7-1.2 2-2.4 4-2.4 3.4 0 4.9 3.7 3.3 6.9C19.5 16.4 12 21 12 21z"/></svg>
+          </a>
+        </div>
+
+        <div class="about__panel reveal" data-delay="120">
+          <h3>What you get</h3>
+          <ul class="checklist">
+            <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Better visibility</li>
+            <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Clear messaging</li>
+            <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> More engagement</li>
+            <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Real opportunities</li>
+            <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> An authority-driven brand</li>
+          </ul>
+          <div class="about__panel-note">
+            <span class="dot"></span>
+            No pressure posts. No fake hype. Just steady growth and a strong presence.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="section services" id="services">
+      <div class="section__head reveal">
+        <span class="eyebrow">What I do</span>
+        <h2 class="section__title">Done-for-you LinkedIn, <span class="grad-text">end to end.</span></h2>
+      </div>
+      <div class="services__grid">
+        <article class="service-card reveal">
+          <div class="service-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.5l2.4 4.86 5.36.78-3.88 3.78.92 5.34L12 18.74l-4.8 2.52.92-5.34-3.88-3.78 5.36-.78L12 2.5z"/></svg>
+          </div>
+          <h3>Personal Brand Building</h3>
+          <p>A clear, magnetic brand direction that makes you the obvious choice in your niche.</p>
+        </article>
+        <article class="service-card reveal" data-delay="60">
+          <div class="service-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5z"/></svg>
+          </div>
+          <h3>High-Converting Content</h3>
+          <p>Posts written in your voice that earn attention, build trust and bring inbound.</p>
+        </article>
+        <article class="service-card reveal" data-delay="120">
+          <div class="service-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01"/></svg>
+          </div>
+          <h3>Strategic Posting Systems</h3>
+          <p>Consistent, planned content so you show up like clockwork — without the stress.</p>
+        </article>
+        <article class="service-card reveal" data-delay="180">
+          <div class="service-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="21" x2="4" y2="14"/><line x1="4" y1="10" x2="4" y2="3"/><line x1="12" y1="21" x2="12" y2="12"/><line x1="12" y1="8" x2="12" y2="3"/><line x1="20" y1="21" x2="20" y2="16"/><line x1="20" y1="12" x2="20" y2="3"/><line x1="1" y1="14" x2="7" y2="14"/><line x1="9" y1="8" x2="15" y2="8"/><line x1="17" y1="16" x2="23" y2="16"/></svg>
+          </div>
+          <h3>Complete Profile Optimization</h3>
+          <p>Headline, banner, about and featured — engineered to convert profile visits.</p>
+        </article>
+        <article class="service-card reveal" data-delay="240">
+          <div class="service-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3>Done-For-You Services</h3>
+          <p>I manage LinkedIn end-to-end so you can focus on your life and business.</p>
+        </article>
+        <article class="service-card reveal" data-delay="300">
+          <div class="service-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+          </div>
+          <h3>Audience Growth &amp; Engagement</h3>
+          <p>Strategic networking and engagement that turns visibility into opportunities.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- WORK / CONTENT SHOWCASE -->
+    <section class="section work" id="work">
+      <div class="section__head reveal">
+        <span class="eyebrow">Selected work</span>
+        <h2 class="section__title">Content that <span class="grad-text">stops the scroll.</span></h2>
+        <p class="section__lead">Real posts, written and designed to build authority and drive action.</p>
+      </div>
+      <div class="work__grid">
+        <figure class="work-card reveal tilt">
+          <img src="assets/guide-1.jpg" alt="LinkedIn post: Day 1 feels impossible" loading="lazy" />
+        </figure>
+        <figure class="work-card reveal tilt" data-delay="80">
+          <img src="assets/guide-2.jpg" alt="LinkedIn post: The simplest formula to monetise your LinkedIn" loading="lazy" />
+        </figure>
+        <figure class="work-card reveal tilt" data-delay="160">
+          <img src="assets/guide-3.jpg" alt="LinkedIn post: Write. Show up. Repeat." loading="lazy" />
+        </figure>
+        <figure class="work-card reveal tilt" data-delay="240">
+          <img src="assets/guide-4.jpg" alt="LinkedIn post: Attention is easy to get. Trust is what brings inbound." loading="lazy" />
+        </figure>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="section experience" id="experience">
+      <div class="section__head reveal">
+        <span class="eyebrow">Experience</span>
+        <h2 class="section__title">Years in the <span class="grad-text">trenches of words.</span></h2>
+      </div>
+      <div class="timeline">
+        <div class="timeline__item reveal">
+          <div class="timeline__dot"></div>
+          <div class="timeline__card">
+            <div class="timeline__top">
+              <h3>Content Girl</h3>
+              <span class="tag">Full-time</span>
+            </div>
+            <p class="timeline__org">ESS — Enterprise Software Solutions · Phoenix, AZ (Remote)</p>
+            <p class="timeline__date">Jun 2024 — Present</p>
+            <p>Content strategy, creator engagement, branding with designers, and ad design for a global software company.</p>
+          </div>
+        </div>
+        <div class="timeline__item reveal" data-delay="80">
+          <div class="timeline__dot"></div>
+          <div class="timeline__card">
+            <div class="timeline__top">
+              <h3>LinkedIn Ghostwriter</h3>
+              <span class="tag">Self-employed</span>
+            </div>
+            <p class="timeline__org">LinkedIn · Remote</p>
+            <p class="timeline__date">Sep 2022 — Present</p>
+            <p>Helping people 10× their LinkedIn presence — writing in their voice, building brands, and turning visibility into opportunities.</p>
+          </div>
+        </div>
+        <div class="timeline__item reveal" data-delay="160">
+          <div class="timeline__dot"></div>
+          <div class="timeline__card">
+            <div class="timeline__top">
+              <h3>Content Manager</h3>
+              <span class="tag">Contract</span>
+            </div>
+            <p class="timeline__org">Ethum · Remote</p>
+            <p class="timeline__date">Sep 2023 — Sep 2025</p>
+            <p>Owning content direction and execution — proving that "company pages are dead" is only true without a strategy.</p>
+          </div>
+        </div>
+        <div class="timeline__item reveal" data-delay="240">
+          <div class="timeline__dot"></div>
+          <div class="timeline__card">
+            <div class="timeline__top">
+              <h3>Website Copywriter</h3>
+              <span class="tag">Fiverr</span>
+            </div>
+            <p class="timeline__org">Fiverr · Freelance</p>
+            <p class="timeline__date">Oct 2021 — Present</p>
+            <p>The art of persuasion across ads, sales, email, website and landing-page copy for brands of all sizes.</p>
+          </div>
+        </div>
+        <div class="timeline__item reveal" data-delay="320">
+          <div class="timeline__dot"></div>
+          <div class="timeline__card">
+            <div class="timeline__top">
+              <h3>Sales Copywriter</h3>
+              <span class="tag">Upwork</span>
+            </div>
+            <p class="timeline__org">Upwork · Freelance</p>
+            <p class="timeline__date">Sep 2021 — Present</p>
+            <p>Landing pages, sales copy, website, social and email copy — written to increase conversion and sales.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- REVIEWS -->
+    <section class="section reviews" id="reviews">
+      <div class="section__head reveal">
+        <span class="eyebrow">Client love</span>
+        <h2 class="section__title">What people say after <span class="grad-text">working with me.</span></h2>
+      </div>
+      <div class="reviews__grid">
+        <figure class="review-card reveal">
+          <div class="review-card__stars">★★★★★</div>
+          <blockquote>Asma significantly raised the visibility of my LinkedIn profile and crafted strong outreach content that is yielding exceptional results. Her expertise and dedication have truly made a difference. Highly recommend her services.</blockquote>
+          <figcaption>
+            <span class="avatar">FD</span>
+            <div><b>Francesca Durham</b><small>Strategic Talent Leader · Creative Producer</small></div>
+          </figcaption>
+        </figure>
+        <figure class="review-card reveal" data-delay="80">
+          <div class="review-card__stars">★★★★★</div>
+          <blockquote>One of the best copywriting services delivered. I highly recommend Asma for her experience and expertise in the field. I look forward to our continued collaboration.</blockquote>
+          <figcaption>
+            <span class="avatar">RF</span>
+            <div><b>Raquel "Raqi" Flores</b><small>Turning Authenticity into Influence</small></div>
+          </figcaption>
+        </figure>
+        <figure class="review-card reveal" data-delay="160">
+          <div class="review-card__stars">★★★★★</div>
+          <blockquote>I had a 1:1 session with Asma about LinkedIn strategy. She made everything super easy — from strategy to content creation, she explained everything so well. Highly recommend her. You're the best!</blockquote>
+          <figcaption>
+            <span class="avatar">MM</span>
+            <div><b>Mostafa Magdy</b><small>Fixes broken e-commerce systems</small></div>
+          </figcaption>
+        </figure>
+        <figure class="review-card reveal" data-delay="240">
+          <div class="review-card__stars">★★★★★</div>
+          <blockquote>I had a 1-on-1 call with Asma and she offered great insight on LinkedIn and copywriting. She was very helpful and more than happy to answer all of my questions and concerns.</blockquote>
+          <figcaption>
+            <span class="avatar">JD</span>
+            <div><b>Johnny Daher</b><small>Business coach for startup success</small></div>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- CONTACT / CTA -->
+    <section class="section contact" id="contact">
+      <div class="contact__card reveal">
+        <div class="contact__glow"></div>
+        <span class="eyebrow">Let's work together</span>
+        <h2>Want a LinkedIn presence that <span class="grad-text">finally works for you?</span></h2>
+        <p>Book a free 1:1 call or send me a DM — and let's elevate your LinkedIn together.</p>
+        <div class="contact__actions">
+          <a href="https://www.linkedin.com/in/asmakhalid-copywriter/" target="_blank" rel="noopener" class="btn btn--primary btn--lg">
+            Book a Free 1:1 Call
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/asmakhalid-copywriter/" target="_blank" rel="noopener" class="btn btn--ghost btn--lg">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M4.98 3.5A2.5 2.5 0 1 1 0 3.5a2.5 2.5 0 0 1 4.98 0zM0 8h5v16H0V8zm7.5 0h4.8v2.2h.07c.67-1.2 2.3-2.5 4.73-2.5 5.06 0 6 3.3 6 7.6V24h-5v-7.1c0-1.7 0-3.9-2.4-3.9s-2.7 1.85-2.7 3.77V24h-5V8z"/></svg>
+            DM me on LinkedIn
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <span class="nav__logo">AK</span>
+        <div>
+          <b>Asma Khalid</b>
+          <small>LinkedIn Growth Expert</small>
+        </div>
+      </div>
+      <nav class="footer__links">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#work">Work</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a href="https://www.linkedin.com/in/asmakhalid-copywriter/" target="_blank" rel="noopener" class="footer__social" aria-label="Asma Khalid on LinkedIn">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M4.98 3.5A2.5 2.5 0 1 1 0 3.5a2.5 2.5 0 0 1 4.98 0zM0 8h5v16H0V8zm7.5 0h4.8v2.2h.07c.67-1.2 2.3-2.5 4.73-2.5 5.06 0 6 3.3 6 7.6V24h-5v-7.1c0-1.7 0-3.9-2.4-3.9s-2.7 1.85-2.7 3.77V24h-5V8z"/></svg>
+      </a>
+    </div>
+    <div class="footer__bottom">
+      <p>© <span id="year"></span> Asma Khalid. All rights reserved.</p>
+      <p class="footer__credit">
+        Built by <a href="https://developerstudio.org" target="_blank" rel="noopener">developerstudio.org</a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
