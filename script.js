@@ -64,9 +64,10 @@
   }
 
   /* ---------- Animated counters ---------- */
-  const counters = document.querySelectorAll(".stat__num");
+  const counters = document.querySelectorAll(".stat__num[data-count]");
   const runCounter = (el) => {
     const target = parseFloat(el.dataset.count);
+    if (isNaN(target)) return;
     const suffix = el.dataset.suffix || "";
     const duration = 1500;
     const start = performance.now();
