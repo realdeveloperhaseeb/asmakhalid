@@ -4,22 +4,22 @@
    ============================================================ */
 
 :root {
-  --bg: #07060a;
-  --bg-soft: #0d0b13;
-  --panel: rgba(255, 255, 255, 0.04);
-  --panel-border: rgba(255, 255, 255, 0.09);
-  --text: #f4f1f8;
-  --text-dim: #b3a9c4;
-  --text-mute: #7c7290;
+  --bg: #000000;
+  --bg-soft: #0a0a0c;
+  --panel: rgba(255, 255, 255, 0.045);
+  --panel-border: rgba(255, 255, 255, 0.1);
+  --text: #ffffff;
+  --text-dim: #c4c4cf;
+  --text-mute: #87878f;
 
   --violet: #a855f7;
   --violet-deep: #7c3aed;
-  --violet-light: #c98bff;
-  --magenta: #d946ef;
-  --blue: #3b82f6;
+  --violet-light: #c4a0ff;
+  --magenta: #a855f7;
+  --blue: #a855f7;
 
-  --grad: linear-gradient(120deg, #4f8cff 0%, #9b5cf6 50%, #d24bf0 100%);
-  --grad-soft: linear-gradient(120deg, rgba(168, 85, 247, 0.18), rgba(124, 58, 237, 0.06));
+  --grad: linear-gradient(120deg, #b06cff 0%, #8b3df5 100%);
+  --grad-soft: linear-gradient(120deg, rgba(168, 85, 247, 0.16), rgba(124, 58, 237, 0.05));
 
   --radius: 20px;
   --radius-sm: 14px;
@@ -63,7 +63,7 @@ ul { list-style: none; }
 }
 .glow-2 {
   width: 540px; height: 540px;
-  background: radial-gradient(circle, #d946ef, transparent 65%);
+  background: radial-gradient(circle, #9333ea, transparent 65%);
   bottom: -160px; right: -120px;
   animation: drift2 26s var(--ease) infinite alternate;
 }
@@ -114,14 +114,14 @@ ul { list-style: none; }
 }
 .dot {
   width: 8px; height: 8px; border-radius: 50%;
-  background: #34d399; display: inline-block;
-  box-shadow: 0 0 0 0 rgba(52, 211, 153, 0.6);
+  background: var(--violet); display: inline-block;
+  box-shadow: 0 0 0 0 rgba(168, 85, 247, 0.6);
   animation: pulse 2s infinite;
 }
 @keyframes pulse {
-  0% { box-shadow: 0 0 0 0 rgba(52, 211, 153, 0.55); }
-  70% { box-shadow: 0 0 0 9px rgba(52, 211, 153, 0); }
-  100% { box-shadow: 0 0 0 0 rgba(52, 211, 153, 0); }
+  0% { box-shadow: 0 0 0 0 rgba(168, 85, 247, 0.55); }
+  70% { box-shadow: 0 0 0 9px rgba(168, 85, 247, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(168, 85, 247, 0); }
 }
 
 /* ---------- Buttons ---------- */
@@ -173,7 +173,7 @@ ul { list-style: none; }
 }
 .nav.scrolled {
   padding: 12px clamp(20px, 5vw, 56px);
-  background: rgba(7, 6, 10, 0.72);
+  background: rgba(0,0,0,0.72);
   backdrop-filter: blur(16px);
   border-bottom-color: var(--panel-border);
 }
@@ -245,7 +245,7 @@ ul { list-style: none; }
 .profile-card__badge {
   position: absolute; top: 24px; right: 24px;
   width: 34px; height: 34px; border-radius: 50%;
-  background: rgba(7,6,10,0.7); backdrop-filter: blur(6px);
+  background: rgba(0,0,0,0.7); backdrop-filter: blur(6px);
   display: grid; place-items: center; border: 1px solid var(--panel-border);
 }
 .profile-card__info { padding: 16px 8px 8px; }
@@ -422,7 +422,7 @@ ul { list-style: none; }
   font-size: 5rem; line-height: 1; color: rgba(168,85,247,0.18); font-family: Georgia, serif;
 }
 .review-card:hover { transform: translateY(-6px); border-color: rgba(168,85,247,0.4); }
-.review-card__stars { color: #fbbf24; font-size: 1rem; letter-spacing: 2px; margin-bottom: 16px; }
+.review-card__stars { color: var(--violet-light); font-size: 1rem; letter-spacing: 2px; margin-bottom: 16px; }
 .review-card blockquote { color: var(--text-dim); font-size: 1.02rem; margin-bottom: 22px; }
 .review-card figcaption { display: flex; align-items: center; gap: 14px; }
 .avatar {
@@ -506,7 +506,7 @@ ul { list-style: none; }
   .nav__links.open {
     display: flex; flex-direction: column; gap: 22px;
     position: absolute; top: 100%; left: 0; right: 0;
-    background: rgba(7,6,10,0.96); backdrop-filter: blur(16px);
+    background: rgba(0,0,0,0.95); backdrop-filter: blur(16px);
     padding: 28px clamp(20px, 5vw, 56px); border-bottom: 1px solid var(--panel-border);
   }
   .float-card--a { left: 0; top: 0; }
@@ -570,7 +570,7 @@ ul { list-style: none; }
 .bullet { width: 10px; height: 10px; border-radius: 3px; background: var(--grad); flex-shrink: 0; }
 .callout {
   padding: 26px; border-radius: var(--radius);
-  background: linear-gradient(160deg, rgba(155,92,246,0.14), rgba(79,140,255,0.04));
+  background: linear-gradient(160deg, rgba(155,92,246,0.14), rgba(124,58,237,0.05));
   border: 1px solid rgba(155,92,246,0.3);
 }
 .callout h4 { font-size: 1.05rem; font-weight: 700; margin-bottom: 16px; color: var(--violet-light); }
@@ -600,7 +600,7 @@ ul { list-style: none; }
 .about__overlay {
   position: absolute; bottom: 20px; right: -18px; text-align: center;
   padding: 16px 22px; border-radius: 16px;
-  background: rgba(13,11,19,0.82); border: 1px solid var(--panel-border);
+  background: rgba(10,10,12,0.85); border: 1px solid var(--panel-border);
   backdrop-filter: blur(14px); box-shadow: 0 18px 40px -18px rgba(0,0,0,0.8);
 }
 .about__overlay b { display: block; font-size: 1.7rem; font-weight: 800; background: var(--grad); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
@@ -635,7 +635,7 @@ ul { list-style: none; }
 .pkg-card:hover { transform: translateY(-8px); border-color: rgba(155,92,246,0.4); box-shadow: var(--shadow); }
 .pkg-card--featured {
   border-color: rgba(155,92,246,0.55);
-  background: linear-gradient(170deg, rgba(155,92,246,0.14), rgba(79,140,255,0.04));
+  background: linear-gradient(170deg, rgba(155,92,246,0.14), rgba(124,58,237,0.05));
   box-shadow: 0 24px 60px -28px rgba(155,92,246,0.6);
 }
 .pkg-card__ribbon {
@@ -680,7 +680,7 @@ ul { list-style: none; }
 .waitlist__card {
   display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 50px;
   padding: clamp(34px, 5vw, 56px); border-radius: 28px;
-  background: linear-gradient(160deg, rgba(155,92,246,0.12), rgba(79,140,255,0.03));
+  background: linear-gradient(160deg, rgba(155,92,246,0.12), rgba(124,58,237,0.04));
   border: 1px solid rgba(155,92,246,0.28);
 }
 .pill--coming { margin-bottom: 22px; }
@@ -700,7 +700,7 @@ ul { list-style: none; }
 .contact__grid { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 28px; align-items: start; }
 .contact__embed {
   padding: 14px; border-radius: 24px;
-  background: linear-gradient(160deg, rgba(155,92,246,0.14), rgba(79,140,255,0.03));
+  background: linear-gradient(160deg, rgba(155,92,246,0.14), rgba(124,58,237,0.04));
   border: 1px solid rgba(155,92,246,0.3);
 }
 .contact__embed-head { display: flex; align-items: center; gap: 16px; padding: 14px 14px 18px; }
