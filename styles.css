@@ -633,13 +633,13 @@ ul { list-style: none; }
 .pkg__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; align-items: stretch; }
 .pkg-card {
   display: flex; flex-direction: column; padding: 32px 28px; border-radius: var(--radius);
-  background: var(--panel); border: 1px solid var(--panel-border); position: relative;
+  background: var(--panel); border: 1px solid rgba(177,77,255,0.6); position: relative;
   transition: transform 0.4s var(--ease), border-color 0.4s, box-shadow 0.4s;
 }
-.pkg-card:hover { transform: translateY(-8px); border-color: rgba(155,92,246,0.4); box-shadow: var(--shadow); }
+.pkg-card:hover { transform: translateY(-8px); border-color: rgba(177,77,255,0.9); box-shadow: var(--shadow); }
 .pkg-card--featured {
-  border-color: rgba(177,77,255,0.6);
-  background: rgba(255,255,255,0.035);
+  border-color: rgba(177,77,255,0.95);
+  background: rgba(177,77,255,0.05);
   box-shadow: 0 24px 60px -28px rgba(177,77,255,0.55);
 }
 .pkg-card__ribbon {
