@@ -197,10 +197,18 @@
           status.classList.add("ok");
           joinForm.reset();
         } else {
-          throw new Error(json.message || "failed");
+          const msg = (json && json.message) || "";
+          if (/web server|HTML files/i.test(msg)) {
+            throw new Error("This form only works on the live website — not a local file preview.");
+          }
+          throw new Error(msg || "failed");
         }
       } catch (err) {
-        status.textContent = "Something went wrong. Please email asmakay27@gmail.com directly.";
+        const m = err && err.message;
+        status.textContent =
+          m && m !== "failed" && m !== "Failed to fetch"
+            ? m
+            : "Something went wrong. Please email asmakay27@gmail.com directly.";
         status.classList.add("err");
       } finally {
         btn.disabled = false;
