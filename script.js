@@ -148,4 +148,64 @@
     );
     sections.forEach((s) => sio.observe(s));
   }
+
+  /* ---------- Copy-to-clipboard (IBAN etc.) ---------- */
+  document.querySelectorAll(".pay-copy").forEach((b) => {
+    b.addEventListener("click", async () => {
+      const text = b.dataset.copy || "";
+      try {
+        await navigator.clipboard.writeText(text);
+        const prev = b.textContent;
+        b.textContent = "Copied";
+        setTimeout(() => (b.textContent = prev), 1500);
+      } catch (e) {
+        /* clipboard unavailable — ignore */
+      }
+    });
+  });
+
+  /* ---------- Booking form (FormSubmit) ---------- */
+  const joinForm = document.getElementById("joinForm");
+  if (joinForm) {
+    const status = document.getElementById("joinStatus");
+    const btn = joinForm.querySelector(".join-form__btn");
+    const label = joinForm.querySelector(".join-form__btn-label");
+    const ENDPOINT = "https://formsubmit.co/ajax/asmakay27@gmail.com";
+
+    joinForm.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      if (!joinForm.checkValidity()) {
+        joinForm.reportValidity();
+        return;
+      }
+      status.textContent = "";
+      status.className = "join-form__status";
+      btn.disabled = true;
+      const prevLabel = label ? label.textContent : "";
+      if (label) label.textContent = "Sending…";
+
+      try {
+        const data = Object.fromEntries(new FormData(joinForm).entries());
+        const res = await fetch(ENDPOINT, {
+          method: "POST",
+          headers: { "Content-Type": "application/json", Accept: "application/json" },
+          body: JSON.stringify(data),
+        });
+        const json = await res.json().catch(() => ({}));
+        if (res.ok && String(json.success) === "true") {
+          status.textContent = "✓ Received! Please wait — our team will review and get back to you.";
+          status.classList.add("ok");
+          joinForm.reset();
+        } else {
+          throw new Error(json.message || "failed");
+        }
+      } catch (err) {
+        status.textContent = "Something went wrong. Please email asmakay27@gmail.com directly.";
+        status.classList.add("err");
+      } finally {
+        btn.disabled = false;
+        if (label) label.textContent = prevLabel || "Submit & Confirm";
+      }
+    });
+  }
 })();

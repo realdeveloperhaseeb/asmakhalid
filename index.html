@@ -20,7 +20,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="styles.css?v=7" />
+  <link rel="stylesheet" href="styles.css?v=8" />
 </head>
 <body>
   <!-- Animated background glows -->
@@ -394,33 +394,63 @@
       </div>
     </section>
 
-    <!-- WAITLIST -->
-    <section class="section waitlist">
+    <!-- GET STARTED / BOOKING FORM -->
+    <section class="section waitlist" id="join">
       <div class="waitlist__card reveal">
         <div class="waitlist__left">
-          <span class="pill pill--coming"><span class="dot"></span> Coming Soon</span>
-          <h2 class="section__title">Something Is <span class="grad-text">Being Built.</span></h2>
-          <p class="waitlist__sub">And it will change how you see LinkedIn forever.</p>
-          <p>Most LinkedIn advice tells you to post more, engage more, optimize more. This doesn't.</p>
-          <p>What's coming is a complete system — built around the one thing that actually separates the profiles that generate clients daily from the ones that post into silence.</p>
-          <p>It's not about content. It's not about followers. And once you understand what it actually is, you'll wonder why nobody told you sooner.</p>
-          <a href="mailto:asmakay27@gmail.com?subject=Early%20Access%20%E2%80%94%20The%20LinkedIn%20Edge&body=Hi%20Asma%2C%20I'd%20love%20early%20access%20to%20what%20you're%20building." class="btn btn--primary">
-            Get Early Access
-            <svg viewBox="0 0 24 24" width="18" height="18" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </a>
+          <span class="pill pill--coming"><span class="dot"></span> Get Started</span>
+          <h2 class="section__title">Reserve Your <span class="grad-text">Spot.</span></h2>
+          <p class="waitlist__sub">Please fill the form and pay the amount to confirm.</p>
+          <p>Send your payment to the account below, then fill in the form with your transaction / reference ID. Our team will review and get back to you.</p>
+
+          <div class="pay-card">
+            <div class="pay-card__amount">
+              <span>Amount to pay</span>
+              <b>$13 <i>≈ 3,600 PKR</i></b>
+            </div>
+            <ul class="pay-card__rows">
+              <li><span>Bank</span><b>Meezan Bank Limited</b></li>
+              <li><span>Account Holder</span><b>ASMA KHALID</b></li>
+              <li><span>IBAN</span><b class="pay-iban">PK09MEZN0004260104290075 <button type="button" class="pay-copy" data-copy="PK09MEZN0004260104290075" aria-label="Copy IBAN">Copy</button></b></li>
+            </ul>
+          </div>
         </div>
+
         <div class="waitlist__right">
-          <h3>A Few Things You'll Discover</h3>
-          <ul class="discover">
-            <li>Why most LinkedIn profiles actively repel the clients they're trying to attract</li>
-            <li>The positioning shift that makes people come to you instead of you chasing them</li>
-            <li>What the algorithm actually rewards — and it's not what most people think</li>
-            <li>The one section of your profile that decides whether someone books a call or leaves</li>
-            <li>Why posting consistently still isn't working — and what to do instead</li>
-            <li>The visibility framework behind profiles generating 5–10 inbound leads every week</li>
-            <li>Everything quietly costing you clients right now — and how to fix it</li>
-          </ul>
-          <blockquote class="quote">"The people on the waitlist get it first — and at a price that won't exist after launch."</blockquote>
+          <form id="joinForm" class="join-form" novalidate>
+            <div class="field">
+              <label for="jf-name">Full Name</label>
+              <input id="jf-name" name="name" type="text" required placeholder="Your name" />
+            </div>
+            <div class="field">
+              <label for="jf-email">Email</label>
+              <input id="jf-email" name="email" type="email" required placeholder="you@email.com" />
+            </div>
+            <div class="field">
+              <label for="jf-wa">WhatsApp Number</label>
+              <input id="jf-wa" name="whatsapp" type="tel" required placeholder="+92 3xx xxxxxxx" />
+            </div>
+            <div class="field">
+              <label for="jf-trx">Transaction / Reference ID</label>
+              <input id="jf-trx" name="transaction_id" type="text" required placeholder="Payment reference from your bank app" />
+            </div>
+            <div class="field">
+              <label for="jf-msg">Short Message</label>
+              <textarea id="jf-msg" name="message" rows="3" required placeholder="Tell me a little about your goals"></textarea>
+            </div>
+
+            <!-- FormSubmit configuration -->
+            <input type="hidden" name="_subject" value="New booking — The LinkedIn Edge" />
+            <input type="hidden" name="_template" value="table" />
+            <input type="hidden" name="_autoresponse" value="Thank you for your submission! Please wait — our team will review your details and get back to you shortly. — The LinkedIn Edge, Asma Khalid" />
+            <input type="text" name="_honey" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true" />
+
+            <button type="submit" class="btn btn--primary join-form__btn">
+              <span class="join-form__btn-label">Submit &amp; Confirm</span>
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <p class="join-form__status" id="joinStatus" role="status" aria-live="polite"></p>
+          </form>
         </div>
       </div>
     </section>
@@ -575,6 +605,6 @@
   <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
   <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
 
-  <script src="script.js?v=7"></script>
+  <script src="script.js?v=8"></script>
 </body>
 </html>

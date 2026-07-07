@@ -106,8 +106,14 @@ ul { list-style: none; }
 /* ---------- Helpers ---------- */
 .grad-text {
   background: var(--grad);
+  background-size: 220% auto;
   -webkit-background-clip: text; background-clip: text;
   -webkit-text-fill-color: transparent; color: transparent;
+  animation: gradShift 7s ease-in-out infinite;
+}
+@keyframes gradShift {
+  0%, 100% { background-position: 0% center; }
+  50% { background-position: 100% center; }
 }
 .eyebrow {
   display: inline-block;
@@ -137,10 +143,17 @@ ul { list-style: none; }
 }
 .btn--lg { padding: 16px 32px; font-size: 1.05rem; }
 .btn--primary {
-  background: var(--grad); color: #fff;
+  background: var(--grad); color: #fff; overflow: hidden;
   box-shadow: 0 12px 30px -10px rgba(168, 85, 247, 0.7);
 }
+.btn--primary::after {
+  content: ""; position: absolute; top: 0; left: -130%; width: 55%; height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255,255,255,0.4), transparent);
+  transform: skewX(-20deg); pointer-events: none;
+}
 .btn--primary:hover { transform: translateY(-3px); box-shadow: 0 20px 40px -12px rgba(168, 85, 247, 0.85); }
+.btn--primary:hover::after { animation: btnShine 0.85s ease; }
+@keyframes btnShine { from { left: -130%; } to { left: 130%; } }
 .btn--primary svg { transition: transform 0.3s var(--ease); }
 .btn--primary:hover svg { transform: translateX(4px); }
 .btn--ghost {
@@ -707,6 +720,52 @@ ul { list-style: none; }
   content: ""; position: absolute; left: 2px; top: 8px; width: 8px; height: 8px;
   border-radius: 50%; background: var(--grad);
 }
+
+/* Payment card */
+.pay-card {
+  margin-top: 26px; padding: 22px 24px; border-radius: var(--radius);
+  background: rgba(177,77,255,0.06); border: 1px solid rgba(177,77,255,0.4);
+}
+.pay-card__amount {
+  display: flex; align-items: baseline; justify-content: space-between; gap: 12px;
+  padding-bottom: 16px; margin-bottom: 14px; border-bottom: 1px solid var(--panel-border);
+}
+.pay-card__amount span { color: var(--text-mute); font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.12em; }
+.pay-card__amount b { font-size: 1.7rem; font-weight: 800; letter-spacing: -0.01em; }
+.pay-card__amount b i { font-size: 0.9rem; font-weight: 500; font-style: normal; color: var(--violet-light); }
+.pay-card__rows { display: grid; gap: 12px; }
+.pay-card__rows li { display: flex; align-items: center; justify-content: space-between; gap: 14px; font-size: 0.95rem; }
+.pay-card__rows li span { color: var(--text-mute); flex-shrink: 0; }
+.pay-card__rows li b { font-weight: 600; text-align: right; }
+.pay-iban { display: inline-flex; align-items: center; gap: 9px; flex-wrap: wrap; justify-content: flex-end; word-break: break-all; }
+.pay-copy {
+  font-family: inherit; font-size: 0.68rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em;
+  padding: 4px 10px; border-radius: 8px; cursor: pointer; color: var(--violet-light);
+  background: rgba(177,77,255,0.15); border: 1px solid rgba(177,77,255,0.4); transition: background .25s, color .25s;
+}
+.pay-copy:hover { background: rgba(177,77,255,0.32); color: #fff; }
+
+/* Booking form */
+.join-form { display: grid; gap: 15px; }
+.field { display: grid; gap: 7px; }
+.field label { font-size: 0.84rem; font-weight: 600; color: var(--text-dim); }
+.field input, .field textarea {
+  font-family: inherit; font-size: 0.98rem; color: var(--text); width: 100%;
+  padding: 13px 16px; border-radius: 12px; background: #0e0c14;
+  border: 1px solid var(--panel-border); transition: border-color .25s, box-shadow .25s, background .25s;
+}
+.field input::placeholder, .field textarea::placeholder { color: #5a5268; }
+.field input:focus, .field textarea:focus {
+  outline: none; border-color: rgba(177,77,255,0.7); background: #12101a;
+  box-shadow: 0 0 0 3px rgba(177,77,255,0.16);
+}
+.field textarea { resize: vertical; min-height: 92px; }
+.field input:user-invalid, .field textarea:user-invalid { border-color: rgba(255,99,99,0.6); }
+.join-form__btn { width: 100%; justify-content: center; margin-top: 4px; }
+.join-form__btn[disabled] { opacity: 0.65; cursor: progress; }
+.join-form__status { font-size: 0.92rem; text-align: center; min-height: 1.1em; margin: 2px 0 0; color: var(--text-dim); }
+.join-form__status.ok { color: #34d399; }
+.join-form__status.err { color: #ff7a7a; }
 
 /* CONTACT (redesigned, no form) */
 .contact__grid { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 28px; align-items: start; }
