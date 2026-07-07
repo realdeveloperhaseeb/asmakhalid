@@ -217,3 +217,38 @@
     });
   }
 })();
+
+/* ============================================================
+   Source-view deterrents (casual protection only).
+   NOTE: front-end code is always retrievable by determined users;
+   this only discourages right-click / view-source / devtools.
+   ============================================================ */
+(function () {
+  "use strict";
+
+  // Disable right-click / long-press context menu
+  document.addEventListener("contextmenu", function (e) {
+    e.preventDefault();
+  });
+
+  // Prevent dragging images out of the page
+  document.addEventListener("dragstart", function (e) {
+    if (e.target && e.target.tagName === "IMG") e.preventDefault();
+  });
+
+  // Block common view-source / devtools keyboard shortcuts
+  document.addEventListener("keydown", function (e) {
+    const key = (e.key || "").toLowerCase();
+    const ctrl = e.ctrlKey || e.metaKey;
+    const blocked =
+      e.key === "F12" ||
+      (ctrl && key === "u") ||                       // view source
+      (ctrl && key === "s") ||                       // save page
+      (ctrl && e.shiftKey && (key === "i" || key === "j" || key === "c")); // devtools
+    if (blocked) {
+      e.preventDefault();
+      e.stopPropagation();
+      return false;
+    }
+  });
+})();
