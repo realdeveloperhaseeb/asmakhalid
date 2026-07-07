@@ -721,6 +721,43 @@ ul { list-style: none; }
   border-radius: 50%; background: var(--grad);
 }
 
+/* BOOK / lead magnet */
+.book__inner { display: grid; grid-template-columns: 0.82fr 1.18fr; gap: 60px; align-items: center; }
+.book__media { position: relative; display: flex; justify-content: center; }
+.book__img {
+  width: 100%; max-width: 330px; position: relative; z-index: 1;
+  filter: drop-shadow(0 40px 55px rgba(0,0,0,0.65));
+  animation: bookFloat 5.5s ease-in-out infinite;
+}
+.book__glow {
+  position: absolute; inset: 0; margin: auto; width: 78%; height: 72%; z-index: 0;
+  background: radial-gradient(circle, rgba(177,77,255,0.6), transparent 66%);
+  filter: blur(64px);
+}
+.book__ribbon {
+  position: absolute; top: 6%; right: 8%; z-index: 2;
+  font-size: 0.74rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
+  padding: 6px 14px; border-radius: 100px; background: var(--grad); color: #fff;
+  box-shadow: 0 10px 24px -8px rgba(177,77,255,0.9);
+}
+@keyframes bookFloat {
+  0%, 100% { transform: translateY(0) rotate(-1.2deg); }
+  50% { transform: translateY(-16px) rotate(1.2deg); }
+}
+.book__lead { color: var(--text-dim); font-size: 1.08rem; margin: 18px 0 24px; }
+.book__list { display: grid; gap: 12px; margin-bottom: 30px; }
+.book__list li { position: relative; padding-left: 28px; color: var(--text); font-size: 1.02rem; font-weight: 500; }
+.book__list li::before {
+  content: ""; position: absolute; left: 4px; top: 6px; width: 6px; height: 11px;
+  border: solid var(--violet-light); border-width: 0 2px 2px 0; transform: rotate(45deg);
+}
+.book__buy { display: flex; align-items: center; gap: 26px; flex-wrap: wrap; margin-bottom: 18px; }
+.book__price { display: flex; align-items: baseline; gap: 10px; }
+.book__price b { font-size: 2.5rem; font-weight: 800; letter-spacing: -0.02em; }
+.book__price span { color: var(--text-mute); font-size: 1rem; }
+.book__meta { color: var(--text-mute); font-size: 0.92rem; }
+.book__stars { color: var(--violet-light); letter-spacing: 2px; margin-right: 6px; }
+
 /* Payment card */
 .pay-card {
   margin-top: 26px; padding: 22px 24px; border-radius: var(--radius);
@@ -825,6 +862,9 @@ ul { list-style: none; }
   .process__grid { grid-template-columns: repeat(2, 1fr); }
   .waitlist__card { grid-template-columns: 1fr; gap: 36px; }
   .contact__grid { grid-template-columns: 1fr; }
+  .book__inner { grid-template-columns: 1fr; gap: 40px; }
+  .book__media { order: -1; }
+  .book__img { max-width: 260px; }
 }
 
 @media (max-width: 600px) {
